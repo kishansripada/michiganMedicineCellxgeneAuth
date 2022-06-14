@@ -26,7 +26,7 @@ app.get('/login/:password', (req, res) => {
     }
 
 
-    return passwordUrlDict[req.params.password]
+    res.send(passwordUrlDict[req.params.password] || false)
 })
 
 

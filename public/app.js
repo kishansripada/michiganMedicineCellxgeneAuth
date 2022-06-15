@@ -11,7 +11,6 @@ function setCookie(cname, cvalue, exhours) {
 btn.onclick = async function () {
     let password = document.getElementById("password").value
     let datasetUrl = await fetch(`${window.origin}/login/${password}`).then(r => r.json())
-
     if (datasetUrl) {
         setCookie("auth", "XXVeh5U9hVu7Q87rhKQ51g==", 1)
 
@@ -24,7 +23,7 @@ btn.onclick = async function () {
                 "Authorization": "Bearer 7143941a-cb61-4943-837a-fb0085cfb660"
             },
             "body": {
-                "DATASET": datasetUrl
+                "DATASET": datasetUrl.DATASET
             }
         }).then(r => {
             // console.log(`loading dataset with url ${r.DATASET}`)

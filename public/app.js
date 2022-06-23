@@ -37,14 +37,14 @@ btn.onclick = async function () {
             body: `{"DATASET":"${datasetUrl.DATASET}"}`
         };
 
-        fetch('https://api.heroku.com/apps/michigan-cellxgene/config-vars', options).then(r => {
-            // console.log(`loading dataset with url ${r.DATASET}`)
-            window.location.href = `${window.origin}/app`
-        }).catch(err => {
-            console.error(err);
-        });
+//         fetch('https://api.heroku.com/apps/michigan-cellxgene/config-vars', options).then(r => {
+//             // console.log(`loading dataset with url ${r.DATASET}`)
+         
+//         }).catch(err => {
+//             console.error(err);
+//         });
 
-
+   window.location.href = `${window.origin}/app`
 
     }
 };

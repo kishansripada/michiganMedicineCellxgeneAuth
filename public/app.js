@@ -14,7 +14,7 @@ btn.onclick = async function () {
     console.log(datasetUrl.DATASET)
     if (datasetUrl) {
         setCookie("auth", "XXVeh5U9hVu7Q87rhKQ51g==", 1)
-
+   window.location.href = `${window.origin}/app`
         // change config vars in heroku
         // fetch("https://api.heroku.com/apps/michigan-cellxgene/config-vars", {
         //     "method": "PATCH",
@@ -27,15 +27,15 @@ btn.onclick = async function () {
         //         "DATASET": datasetUrl.DATASET
         //     }
         // })
-        const options = {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json',
-                Accept: 'application/vnd.heroku+json; version=3',
-                Authorization: 'Bearer 7143941a-cb61-4943-837a-fb0085cfb660'
-            },
-            body: `{"DATASET":"${datasetUrl.DATASET}"}`
-        };
+//         const options = {
+//             method: 'PATCH',
+//             headers: {
+//                 'Content-Type': 'application/json',
+//                 Accept: 'application/vnd.heroku+json; version=3',
+//                 Authorization: 'Bearer 7143941a-cb61-4943-837a-fb0085cfb660'
+//             },
+//             body: `{"DATASET":"${datasetUrl.DATASET}"}`
+//         };
 
 //         fetch('https://api.heroku.com/apps/michigan-cellxgene/config-vars', options).then(r => {
 //             // console.log(`loading dataset with url ${r.DATASET}`)
@@ -44,7 +44,7 @@ btn.onclick = async function () {
 //             console.error(err);
 //         });
 
-   window.location.href = `${window.origin}/app`
+
 
     }
 };

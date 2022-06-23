@@ -27,22 +27,22 @@ btn.onclick = async function () {
         //         "DATASET": datasetUrl.DATASET
         //     }
         // })
-//         const options = {
-//             method: 'PATCH',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//                 Accept: 'application/vnd.heroku+json; version=3',
-//                 Authorization: 'Bearer 7143941a-cb61-4943-837a-fb0085cfb660'
-//             },
-//             body: `{"DATASET":"${datasetUrl.DATASET}"}`
-//         };
+        const options = {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/vnd.heroku+json; version=3',
+                Authorization: 'Bearer 7143941a-cb61-4943-837a-fb0085cfb660'
+            },
+            body: `{"DATASET":"https://cellxgenetestbucket1.s3.us-east-2.amazonaws.com/pbmc3k+(1).h5ad"}`
+        };
 
-//         fetch('https://api.heroku.com/apps/michigan-cellxgene/config-vars', options).then(r => {
-//             // console.log(`loading dataset with url ${r.DATASET}`)
+        fetch('https://api.heroku.com/apps/michigan-cellxgene/config-vars', options).then(r => {
+            // console.log(`loading dataset with url ${r.DATASET}`)
          
-//         }).catch(err => {
-//             console.error(err);
-//         });
+        }).catch(err => {
+            console.error(err);
+        });
 
 
 

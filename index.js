@@ -22,9 +22,8 @@ app.get('/login/:password', (req, res) => {
 
     let passwordUrlDict = {
         fadhl: "https://cellxgene-example-data.czi.technology/pbmc3k.h5ad",
-        password: "https://cellxgene-example-data.czi.technology/tabula-muris.h5ad"
     }
-
+    
 
     res.send({ "DATASET": passwordUrlDict[req.params.password] } || false)
 })
